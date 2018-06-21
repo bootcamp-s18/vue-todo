@@ -21,6 +21,16 @@
 		</ul>
 
 	</div>
+
+	<script type="text/x-template" id="task">
+		<li class="list-group-item" v-on:click="signalDelete(index)">
+			{{ words }}
+			<button type="button" class="close" aria-label="Close">
+				<span aria-hidden="true" class="text-danger">&times;</span>
+			</button>
+		</li>
+	</script>
+
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="main.js"></script>
 </body>

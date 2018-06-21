@@ -2,12 +2,7 @@ Vue.component('task', {
 
 	props: [ 'words', 'index' ],
 
-	template: `<li class="list-group-item" v-on:click="signalDelete(index)">
-				{{ words }}
-				<button type="button" class="close" aria-label="Close">
-  					<span aria-hidden="true" class="text-danger">&times;</span>
-				</button>
-			</li>`,
+	template: '#task',
 
 	methods: {
 		signalDelete(index) {
