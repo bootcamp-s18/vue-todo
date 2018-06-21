@@ -10,30 +10,12 @@
 	<div id="main" class="pt-5">
 
 		<div class="input-group">
-			<input class="form-control border-success" type="text" placeholder="Binge Game of Thrones">
+			<input class="form-control border-success" type="text" placeholder="Binge Game of Thrones" v-model="newTaskText" v-on:keyup.enter="addTask">
 		</div>
 
 		<ul class="list-group pt-5">
-			<li class="list-group-item">
-				Buy milk
-				<button type="button" class="close" aria-label="Close">
-  					<span aria-hidden="true" class="text-danger">&times;</span>
-				</button>
-			</li>
-			<li class="list-group-item">
-				Eat Oreos
-				<button type="button" class="close" aria-label="Close">
-  					<span aria-hidden="true" class="text-danger">&times;</span>
-				</button>
-			</li>
-			<li class="list-group-item">
-				Do Bootcamp homework
-				<button type="button" class="close" aria-label="Close">
-  					<span aria-hidden="true" class="text-danger">&times;</span>
-				</button>
-			</li>
-			<li class="list-group-item">
-				Wash dishes
+			<li class="list-group-item" v-for="task in tasks">
+				{{ task }}
 				<button type="button" class="close" aria-label="Close">
   					<span aria-hidden="true" class="text-danger">&times;</span>
 				</button>

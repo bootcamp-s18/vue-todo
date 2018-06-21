@@ -1,5 +1,25 @@
 var todo = new Vue({
 
-	el: '#main'
+	el: '#main',
+
+	data: {
+
+		newTaskText: '',
+
+		tasks: [ 'Buy milk', 'Eat Oreos', 'Wash dishes' ]
+
+	},
+
+	methods: {
+
+		addTask: function() {
+
+			this.tasks.push(this.newTaskText);
+			this.newTaskText = '';
+
+		}
+
+
+	}
 
 });
