@@ -17,6 +17,12 @@ var todo = new Vue({
 			this.tasks.push(this.newTaskText);
 			this.newTaskText = '';
 
+		},
+
+		removeTask: function(index) {
+
+			this.tasks.splice(index, 1);
+
 		}
 
 

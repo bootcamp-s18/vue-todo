@@ -14,7 +14,7 @@
 		</div>
 
 		<ul class="list-group pt-5">
-			<li class="list-group-item" v-for="task in tasks">
+			<li class="list-group-item" v-for="(task, index) in tasks" v-on:click="removeTask(index)">
 				{{ task }}
 				<button type="button" class="close" aria-label="Close">
   					<span aria-hidden="true" class="text-danger">&times;</span>
